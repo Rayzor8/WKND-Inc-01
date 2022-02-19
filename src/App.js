@@ -27,7 +27,7 @@ function App() {
    return (
       <>
          <HeaderSection />
-         <MainSection />
+         <MainSection testimonialData={testimonialData}/>
       </>
    );
 }
