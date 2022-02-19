@@ -1,0 +1,57 @@
+@import './utils/variables';
+
+.definition {
+   background-color: $lightPink;
+   height: 591px;
+   display: grid;
+   place-items: center;
+   position: relative;
+
+   &__figure {
+      max-width: 619px;
+
+      blockquote {
+         font-size: 21px;
+         font-weight: 500;
+         text-align: right;
+         line-height: 32px;
+         letter-spacing: -0.75px;
+
+         span {
+            font-weight: 700;
+            color: $blueColor;
+         }
+      }
+
+      figcaption {
+         margin-top: 30px;
+         text-align: right;
+         font-size: 21px;
+         color: white;
+      }
+   }
+
+   &__circle {
+      width: 89px;
+      height: 89px;
+      background-color: $blueColor;
+      position: absolute;
+      top: 400px;
+      left: 283px;
+      border-radius: 50%;
+   }
+
+   &__deco_img {
+      position: absolute;
+      top: 0;
+      right: 0;
+   }
+
+   h2 {
+      font-size: 32px;
+      text-align: center;
+      color: $whiteColor;
+      text-shadow: 0px 20px 30px rgba(249, 131, 171, 0.7);
+      margin-bottom: 2rem;
+   }
+}

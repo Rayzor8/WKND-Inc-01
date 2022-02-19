@@ -1,0 +1,59 @@
+
+.banner {
+   position: relative;
+   height: 800px;
+   .banner-bg {
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      margin-top: -4rem;
+   }
+
+   &__title {
+      z-index: 10;
+      color: white;
+      padding-top: 121px;
+   }
+
+   &__title h1 {
+      font-size: 62px;
+      text-align: center;
+      line-height: 51px;
+      font-weight: 800;
+   }
+
+   &__title h3 {
+      margin-top: 20px;
+      font-size: 21px;
+      text-align: center;
+      line-height: 25px;
+      font-weight: 400;
+      font-style: italic;
+   }
+
+   .icon-group {
+      margin-top: 6rem;
+      display: grid;
+      place-items: center;
+      position: relative;
+
+      .icon-btn {
+         position: absolute;
+         top: 200px;
+         padding: 20px 83px;
+         border-radius: 29px;
+         outline: none;
+         background-color: white;
+         border: 2px solid white;
+         font-size: 16px;
+         color: black;
+         cursor: pointer;
+         transition: 0.3s ease-in-out;
+
+         &:hover {
+            border: 2px solid #0b24fb;
+            color: #0b24fb;
+         }
+      }
+   }
+}

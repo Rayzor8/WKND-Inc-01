@@ -1,0 +1,21 @@
+header {
+   height: 67px;
+   background-color: white;
+   display: flex;
+   align-items: center;
+   padding-left: 213px;
+   gap: 13px;
+
+   p {
+      font-size: 12px;
+   }
+
+   h3 {
+      font-size: 16px;
+   }
+
+   .header-img {
+      width: 33px;
+      height: 33px;
+   }
+}
