@@ -5,12 +5,12 @@ import DefinitionWord from './DefinitionWord';
 import Slider from './Slider';
 import './styles/MainSection.scss';
 
-const MainSection = ({testimonialData}) => {
+const MainSection = () => {
    return (
       <main>
          <Banner />
          <DefinitionWord />
-         <Slider testimonialData={testimonialData}/>
+         <Slider/>
          <Conclusion/>
       </main>
    );
