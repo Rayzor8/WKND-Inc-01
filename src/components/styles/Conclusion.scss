@@ -1,14 +1,15 @@
 .conclusion {
    // height: 1473px;
    background-color: black;
-   margin-top: -11rem;
+   margin-top: -6rem;
    color: white;
    padding-top: 18rem;
    display: flex;
    justify-content: center;
    flex-direction: column;
-   padding-bottom: 5rem;
+   padding-bottom: 240px;
    gap: 5rem;
+   position: relative;
 
    .container {
       width: 619px;
@@ -21,9 +22,94 @@
       }
    }
 
+   .helpTips {
+      position: relative;
+      width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+
+      .decorationImg3 {
+         width: 159px;
+         height: 195px;
+         position: absolute;
+         top: 0;
+         right: -4rem;
+      }
+
+      .title {
+         margin-bottom: 30px;
+         font-size: 32px;
+         line-height: 37px;
+      }
+
+      .card-container {
+         display: flex;
+         gap: 10px;
+         justify-content: center;
+         align-items: center;
+
+         .card {
+            width: 311px;
+            height: 176px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+
+            .card-content {
+               width: 100%;
+               height: 72px;
+               display: flex;
+               align-items: center;
+               padding: 1rem;
+               font-size: 16px;
+               gap: 10px;
+               position: absolute;
+               z-index: 10;
+            }
+
+            .btn-next {
+               cursor: pointer;
+            }
+
+            &::after {
+               content: '';
+               width: 100%;
+               height: 72px;
+               background-color: rgba(0, 0, 0, 0.5);
+               position: absolute;
+               top: 60%;
+               left: 0;
+               z-index: 5;
+            }
+         }
+      }
+
+      @media screen and (max-width: 768px) {
+         width: 100%;
+         .card-container {
+            flex-direction: column;
+         }
+      }
+   }
+
+   .decorationImg2 {
+      position: absolute;
+      bottom: 0;
+      width: 244px;
+      height: 325px;
+   }
+
    @media screen and (max-width: 768px) {
+      padding-bottom: 0;
       .container {
          width: 100%;
+      }
+
+      .decorationImg2{
+         position: unset;
       }
    }
 }
