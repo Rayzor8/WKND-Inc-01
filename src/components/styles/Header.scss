@@ -1,3 +1,5 @@
+@import './utils/mixins';
+
 header {
    height: 67px;
    background-color: white;
@@ -17,5 +19,9 @@ header {
    .header-img {
       width: 33px;
       height: 33px;
+   }
+
+   @include lg-screen {
+      padding-left: 24px;
    }
 }

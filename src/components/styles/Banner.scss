@@ -1,3 +1,4 @@
+@import './utils/mixins';
 
 .banner {
    position: relative;
@@ -13,6 +14,22 @@
       z-index: 10;
       color: white;
       padding-top: 121px;
+      animation-duration: 1s;
+      animation-name: slideRight;
+   }
+
+   @keyframes slideRight {
+      from {
+         margin-left: 100%;
+         width: 300%;
+         opacity: 0;
+      }
+
+      to {
+         margin-left: 0%;
+         width: 100%;
+         opacity: 1;
+      }
    }
 
    &__title h1 {
@@ -36,6 +53,8 @@
       display: grid;
       place-items: center;
       position: relative;
+      animation-duration: 7s;
+      animation-name: FadeIn;
 
       .icon-btn {
          position: absolute;
@@ -49,11 +68,58 @@
          color: black;
          cursor: pointer;
          transition: 0.3s ease-in-out;
-
          &:hover {
             border: 2px solid #0b24fb;
             color: #0b24fb;
          }
       }
    }
+
+   @keyframes FadeIn {
+      from {
+         opacity: 0;
+      }
+
+      to {
+         opacity: 1;
+      }
+   }
+
+   // @media screen and (max-width: 1024px) {
+   //    .banner-bg {
+   //       width: 100%;
+   //       padding-top: 2rem;
+   //    }
+   // }
+
+   @include lg-screen {
+      .banner-bg {
+         width: 100%;
+         padding-top: 2rem;
+      }
+   }
+
+   @include md-screen {
+      .banner-bg {
+         width: 1200px;
+         margin-left: -27rem;
+         padding-top: 2rem;
+      }
+
+      &__title {
+         padding-top: 80px;
+      }
+
+      &__title h1 {
+         font-size: 52px;
+      }
+
+      &__title h3 {
+         font-size: 16px;
+      }
+      .icon-group  {
+        margin-top: 3rem;
+      }
+   }
+
 }

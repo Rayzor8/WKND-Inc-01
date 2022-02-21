@@ -1,21 +1,36 @@
-footer{
-    height: 67px;
-    background-color: #0B24FB;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30rem;
+@import './utils/mixins';
 
-    code{
-        font-size: 16px;
-        font-weight: 700;
-    }
+footer {
+   height: 67px;
+   background-color: #0b24fb;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
-    p{
-        padding: 5px 10px;
-        border-radius: 10px;
-        border: 1px solid white;
-        font-size: 12px;
-    }
+   gap: 50%;
+
+   code {
+      font-size: 16px;
+      font-weight: 700;
+   }
+
+   p {
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: 1px solid white;
+      font-size: 12px;
+   }
+
+   @include lg-screen {
+      justify-content: space-around;
+      gap: 0;
+      code {
+         font-size: 12px;
+      }
+
+      p {
+         font-size: 10px;
+      }
+   }
 }

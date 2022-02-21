@@ -1,3 +1,5 @@
+@import './utils/mixins';
+
 .conclusion {
    // height: 1473px;
    background-color: black;
@@ -15,6 +17,7 @@
       width: 619px;
       margin: 0 auto;
       text-align: center;
+      padding: 0 1.5rem;
       .title {
          margin-bottom: 30px;
          font-size: 32px;
@@ -27,6 +30,7 @@
       width: 1000px;
       margin: 0 auto;
       text-align: center;
+      padding: 0 1.5rem;
 
       .decorationImg3 {
          width: 159px;
@@ -87,7 +91,7 @@
          }
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
          width: 100%;
          .card-container {
             flex-direction: column;
@@ -102,14 +106,24 @@
       height: 325px;
    }
 
-   @media screen and (max-width: 768px) {
+   @include lg-screen {
       padding-bottom: 0;
+      padding-top: 8rem;
+
       .container {
          width: 100%;
+         text-align: start;
       }
 
-      .decorationImg2{
+      .helpTips {
+         text-align: start;
+      }
+      .decorationImg2 {
          position: unset;
+      }
+
+      .decorationImg3 {
+         display: none;
       }
    }
 }

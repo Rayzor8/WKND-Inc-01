@@ -1,4 +1,5 @@
 @import './utils/variables';
+@import './utils/mixins';
 
 .definition {
    background-color: $lightPink;
@@ -9,14 +10,13 @@
 
    &__figure {
       max-width: 619px;
-
+      padding: 0 1.5rem;
       blockquote {
          font-size: 21px;
          font-weight: 500;
          text-align: right;
          line-height: 32px;
          letter-spacing: -0.75px;
-
          span {
             font-weight: 700;
             color: $blueColor;
@@ -36,7 +36,7 @@
       height: 89px;
       background-color: $blueColor;
       position: absolute;
-      top: 400px;
+      top: 395px;
       left: 283px;
       border-radius: 50%;
    }
@@ -53,5 +53,38 @@
       color: $whiteColor;
       text-shadow: 0px 20px 30px rgba(249, 131, 171, 0.7);
       margin-bottom: 2rem;
+   }
+
+   @include lg-screen {
+      place-items: start;
+      padding: 0 1.5rem;
+      gap: 1rem;
+      &__circle {
+         top: 360px;
+         left: 50px;
+         z-index: 10;
+      }
+
+      h2 {
+         margin-bottom: -10rem;
+         text-align: left;
+         z-index: 1000;
+      }
+
+      &__deco_img {
+         top: -13rem;
+      }
+
+      &__figure {
+         padding: 0 1rem;
+      }
+      blockquote {
+         font-size: 16px;
+         line-height: 25px;
+      }
+
+      figcaption {
+         font-size: 16px;
+      }
    }
 }
